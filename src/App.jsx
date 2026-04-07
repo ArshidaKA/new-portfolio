@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Lenis from '@studio-freight/lenis';
-import CardNav from './componnets/animation/CardNav';
 import Footer from './componnets/Footer';
 import CustomCursor from './componnets/animation/CustomCursor';
 
@@ -11,6 +10,9 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import CaseStudy from './pages/CaseStudy';
+import ScrollToTop from './componnets/animation/Scrolltop';
+import Navbar from './componnets/Navbar';
 
 function App() {
   useEffect(() => {
@@ -70,18 +72,10 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop/>
       <CustomCursor />
       <div className="flex flex-col min-h-screen font-sans bg-black text-white selection:bg-white selection:text-black">
-        <CardNav
-          logo=""
-          logoAlt="Arshida Logo"
-          items={items}
-          baseColor="#fff"
-          menuColor="#000"
-          buttonBgColor="#000"
-          buttonTextColor="#fff"
-          ease="power3.out"
-        />
+   <Navbar/>
         <main className="flex-grow pt-[120px]">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -89,6 +83,8 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+                        <Route path="/case-studies" element={<CaseStudy />} />
+
           </Routes>
         </main>
         <Footer />

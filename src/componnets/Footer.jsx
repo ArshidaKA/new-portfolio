@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaGithub, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <Link
               to="/"
-              className="text-3xl font-black tracking-tight inline-block mb-4"
+              className="text-2xl font-black tracking-tight inline-block mb-4"
             >
               Arshida<span className="text-blue-500">.</span>
             </Link>
@@ -27,15 +27,28 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex gap-4 mt-6">
-              {[ 
-                { icon: <FaGithub size={18} />, color: "hover:text-white" },
-                { icon: <FaTwitter size={18} />, color: "hover:text-blue-400" },
-                { icon: <FaLinkedinIn size={18} />, color: "hover:text-blue-500" },
-                { icon: <FaInstagram size={18} />, color: "hover:text-pink-500" },
+              {[
+                {
+                  icon: <FaWhatsapp size={18} />,
+                  link: "https://wa.me/919645299269",
+                  color: "hover:text-green-400",
+                },
+                {
+                  icon: <FaLinkedinIn size={18} />,
+                  link: "https://www.linkedin.com/in/arshida-k-a-5ba98a314",
+                  color: "hover:text-blue-500",
+                },
+                {
+                  icon: <FaInstagram size={18} />,
+                  link: "https://www.instagram.com/growitharshy",
+                  color: "hover:text-pink-500",
+                },
               ].map((item, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`p-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-gray-400 transition duration-300 hover:scale-110 ${item.color}`}
                 >
                   {item.icon}

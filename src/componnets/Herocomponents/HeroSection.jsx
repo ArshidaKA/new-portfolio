@@ -15,7 +15,7 @@ const HeroSection = () => {
   const scaleImage = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
   return (
-    <section ref={containerRef} className="w-full bg-black overflow-hidden relative min-h-screen pt-24 pb-12 flex items-center">
+    <section ref={containerRef} className="w-full bg-black overflow-hidden relative min-h-screen pt-12 pb-12 flex items-center">
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-16 z-10 relative w-full">
         
         {/* LEFT CONTENT */}
@@ -27,15 +27,21 @@ const HeroSection = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 mb-8"
           >
-            <span className="text-xs tracking-widest font-medium uppercase font-mono text-gray-300">Hi, I am Arshida Akbar</span>
+            <span className="text-xs tracking-widest font-medium uppercase font-mono text-[#aee831]">Hi, I am Arshida Akbar</span>
           </motion.div>
 
           {/* Headline - Agency Style */}
           <div className="relative mb-8 text-white w-full">
-            <RevealText 
-              text="WEB DEVELOPER & DIGITAL MARKETER" 
-              className="text-[12vw] sm:text-[8vw] lg:text-[5vw] font-black leading-[1.05] tracking-tight uppercase"
-            />
+  <RevealText 
+    text="WEB DEVELOPER & DIGITAL" 
+    className="block text-[12vw] sm:text-[8vw] lg:text-[5vw] font-black leading-[1.05] tracking-tight uppercase"
+  />
+  
+  <RevealText 
+    text=" MARKETER" 
+    className="block text-[12vw] sm:text-[8vw] text-[#aee831] lg:text-[5vw] font-black leading-[1.05] tracking-tight uppercase"
+  />
+
             {/* Sparkle positioned absolutely relative to container for visual pop */}
             <motion.div 
               className="absolute -right-6 -top-10 text-white opacity-50 hidden md:block"

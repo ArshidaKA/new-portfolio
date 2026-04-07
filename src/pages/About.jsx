@@ -11,10 +11,10 @@ const About = () => {
         {/* HEADER */}
         <div className="mb-24 flex md:items-end justify-between flex-col md:flex-row gap-6">
           <div className="max-w-2xl">
-            <span className="text-gray-500 uppercase tracking-[0.2em] font-mono text-sm block mb-4">
-              Discover
-            </span>
-
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-0 h-0 border-t-[6px] border-b-[6px] border-l-[10px] border-t-transparent border-b-transparent border-l-lime-400"></div>
+              <p className="text-xs tracking-widest uppercase">Discover</p>
+            </div>
             <RevealText
               text="MORE ABOUT MY JOURNEY"
               className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight"
@@ -34,8 +34,7 @@ const About = () => {
               {[
                 { icon: <Clock size={24}/>, value: "2+", label: "Years Exp." },
                 { icon: <Trophy size={24}/>, value: "20+", label: "Projects" },
-                { icon: <CheckCircle2 size={24}/>, value: "15+", label: "Clients" },
-                { icon: <Code2 size={24}/>, value: "10K+", label: "Commits" }
+                { icon: <CheckCircle2 size={24}/>, value: "10+", label: "Clients" },
               ].map((stat, i) => (
                 <motion.div 
                   key={i}
@@ -68,23 +67,18 @@ const About = () => {
 
               <div className="space-y-10">
                 {[
+                 {
+  role: "Web Developer & Digital Marketing Specialist",
+  company: "Franchise Media",
+  period: "2024 - Present",
+  desc: "Developing high-performance web applications using React while driving digital marketing strategies including SEO, content marketing, and campaign optimization to increase traffic, engagement, and conversions."
+},
+                
                   {
-                    role: "Senior Web Developer",
-                    company: "TechNova Solutions",
-                    period: "2023 - Present",
-                    desc: "Leading frontend team, architecting React applications and improving core web vitals."
-                  },
-                  {
-                    role: "Digital Marketing Specialist",
-                    company: "Growth Marketing Inc.",
-                    period: "2021 - 2023",
-                    desc: "Managed SEO & SEM campaigns, resulting in a 150% increase in organic traffic."
-                  },
-                  {
-                    role: "Freelance UI Developer",
-                    company: "Self Employed",
-                    period: "2020 - 2021",
-                    desc: "Designed and developed marketing landing pages for various B2B clients."
+                    role: "Freelance ",
+                    company: "web developer | digital marketer | SEO | SMM",
+                    
+                    desc: "Delivered end-to-end digital solutions—from building modern, responsive websites to driving growth through SEO, social media, and performance marketing."
                   }
                 ].map((item, i) => (
                   <motion.div 
