@@ -8,11 +8,11 @@ import CustomCursor from './componnets/animation/CustomCursor';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
-import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import CaseStudy from './pages/CaseStudy';
 import ScrollToTop from './componnets/animation/Scrolltop';
 import Navbar from './componnets/Navbar';
+import Projects from './componnets/Projectss';
 
 function App() {
   useEffect(() => {

@@ -2,8 +2,8 @@ import React from 'react';
 import HeroSection from '../componnets/Herocomponents/HeroSection';
 import About from './About';
 import Services from './Services';
-import Projects from './Projects';
 import Contact from './Contact';
+import Projects from './Projects';
 const Home = () => {
   return (
     <div>

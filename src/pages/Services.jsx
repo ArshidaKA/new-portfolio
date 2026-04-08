@@ -2,13 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import { RevealText } from "../componnets/animation/RevealText";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
-    {
-      title: "App Development",
-      desc: "As a trusted mobile app development company, we build scalable apps using modern technologies.",
-    },
+    
     {
       title: "Web Development",
       desc: "High-performance websites with modern UI/UX and responsive design.",
@@ -20,6 +18,9 @@ const Services = () => {
     {
       title: "SEO Optimization",
       desc: "Improve rankings and drive organic traffic.",
+    },{
+      title: "Poster Design",
+      desc: "As a trusted mobile app development company, we build scalable apps using modern technologies.",
     },
   ];
 
@@ -36,14 +37,14 @@ const Services = () => {
             </div>
 
             <RevealText
-              text="WHAT I OFFER"
+              text="WHAT I OFFER TO YOU"
               className="text-4xl md:text-6xl font-black uppercase"
             />
           </div>
-
+<Link to={"/services"}>
           <button className="hidden md:flex items-center gap-2 border border-white/70 px-6 py-2 rounded-full hover:bg-white hover:text-black transition">
             View all Services <MoveRight size={18} />
-          </button>
+          </button></Link>
         </div>
       </div>
 
